@@ -65,3 +65,8 @@ do
         else
                 status="Full Time";
         fi
+
+	#Getting store per day work hours in Dictionary
+
+	wage_work_data[$total_working_days]="$work_done_per_day hours Rs. $wage_per_work/- $status";
+done
