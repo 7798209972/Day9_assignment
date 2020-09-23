@@ -27,3 +27,13 @@ declare -i wage_per_work_done;
 declare -a wage_work_data;
 total_working_days=0;
 total_working_hours=0;
+
+#Using Switch Cases
+function get_work_hours() {
+	case $1 in
+		1) work_hours=4;;
+		2) work_hours=8;;
+		*) work_hours=0;;
+	esac
+	echo $work_hours;
+}
