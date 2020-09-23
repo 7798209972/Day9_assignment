@@ -42,8 +42,11 @@ function get_work_hours() {
 
 while [[ $total_working_hours -lt $MAX_WORKING_HOURS && $total_working_days -lt $MAX_WORKING_DAYS ]]
 do
-	((total_working_days++));
+	((total_working_days++)));
 
 	work_done_per_day=$( get_work_hours $((RANDOM%3)) );
 
 	wage_per_work=$(( work_done_per_day * WAGE_PER_HOUR ));
+
+	#Adding up total Working hours
+	total_working_hours=$(( total_working_hours + work_done_per_day ));
