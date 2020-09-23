@@ -37,3 +37,13 @@ function get_work_hours() {
 	esac
 	echo $work_hours;
 }
+
+#Calculating Wages
+
+while [[ $total_working_hours -lt $MAX_WORKING_HOURS && $total_working_days -lt $MAX_WORKING_DAYS ]]
+do
+	((total_working_days++));
+
+	work_done_per_day=$( get_work_hours $((RANDOM%3)) );
+
+	wage_per_work=$(( work_done_per_day * WAGE_PER_HOUR ));
