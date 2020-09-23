@@ -44,6 +44,7 @@ while [[ $total_working_hours -lt $MAX_WORKING_HOURS && $total_working_days -lt 
 do
 	((total_working_days++)));
 
+	#Getting Wotk Hour
 	work_done_per_day=$( get_work_hours $((RANDOM%3)) );
 
 	wage_per_work=$(( work_done_per_day * WAGE_PER_HOUR ));
