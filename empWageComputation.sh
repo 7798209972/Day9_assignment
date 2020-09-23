@@ -51,3 +51,17 @@ do
 
 	#Adding up total Working hours
 	total_working_hours=$(( total_working_hours + work_done_per_day ));
+
+	#Adding up total Wage
+	total_wage=$(( total_wage + wage_per_work ));
+
+	#Applying status
+        if [ $work_done_per_day -lt 8 ] && [ $work_done_per_day -ne 0 ]
+        then
+                status="Part Time";
+	elif [ $work_done_per_day -eq 0 ]
+	then
+		status="Absent";
+        else
+                status="Full Time";
+        fi
