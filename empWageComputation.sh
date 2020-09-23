@@ -14,3 +14,16 @@ attendance_check=$(( RANDOM %2 ));
 #Daily Employee Wage
 WAGE_PER_HOUR=20;
 FULL_DAY_HOUR=8;
+
+#Part Time & Employee Wage
+PART_TIME_HOUR=5;
+
+MAX_WORKING_DAYS=20;
+MAX_WORKING_HOURS=100;
+
+#Variables
+declare -i work_hours_per_day;
+declare -i wage_per_work_done;
+declare -a wage_work_data;
+total_working_days=0;
+total_working_hours=0;
