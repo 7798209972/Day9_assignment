@@ -70,3 +70,19 @@ do
 
 	wage_work_data[$total_working_days]="$work_done_per_day hours Rs. $wage_per_work/- $status";
 done
+
+#Displaying total of Work and Wage
+
+echo "Total Working Hours : " $totalWorkingHours
+
+echo "Total Wage : " $total_wage;
+
+echo "============================================================";
+printf "\n";
+#Day and Daily wage along with total wage
+echo "Employee Wage & Working Details : "
+echo "============================================================";
+for (( i=1; i<=${#wage_work_data[@]}; i++ ))
+do
+        echo "Day $i  "${wage_work_data[i]}" ";
+done
